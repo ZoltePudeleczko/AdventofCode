@@ -15,8 +15,6 @@ while i < len(passportsData):
     passports[len(passports) - 1][passportsData[i]] = passportsData[i + 1]
     i += 2
 
-print(passports)
-
 valid = 0
 for p in passports:
     if ('byr' in p
