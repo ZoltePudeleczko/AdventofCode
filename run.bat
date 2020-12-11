@@ -8,4 +8,5 @@ python src/Day7.py
 python src/Day8.py
 python src/Day9.py
 python src/Day10.py
+python src/Day11.py
 pause
