@@ -1,4 +1,4 @@
-with open('inputs/day11.txt') as f:
+with open('../inputs/day11.txt') as f:
     grid = [list(f.replace('\n', '')) for f in f.readlines()]
 
 gridBackup = [row[:] for row in grid]

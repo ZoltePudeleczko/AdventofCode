@@ -1,4 +1,4 @@
-with open('inputs/day8.txt') as f:
+with open('../inputs/day8.txt') as f:
     instructions = [line.split() for line in f.readlines()]
 
 for instruction in instructions:

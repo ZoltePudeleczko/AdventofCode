@@ -1,4 +1,4 @@
-with open('inputs/day2.txt') as f:
+with open('../inputs/day2.txt') as f:
     passwordlines = [line.split() for line in [r.replace('-', ' ').replace(':', '') for r in f.readlines()]]
 
 valid = 0

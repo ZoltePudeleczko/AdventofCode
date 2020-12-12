@@ -1,4 +1,4 @@
-with open('inputs/day7.txt') as f:
+with open('../inputs/day7.txt') as f:
     rules = [line.replace('bags', '')
              .replace('bag', '')
              .replace('contain', '')

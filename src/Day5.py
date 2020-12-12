@@ -1,4 +1,4 @@
-with open('inputs/day5.txt') as f:
+with open('../inputs/day5.txt') as f:
     boardingPasses = f.readlines()
 
 seatIds = []

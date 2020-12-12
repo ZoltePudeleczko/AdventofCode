@@ -1,4 +1,4 @@
-with open('inputs/day10.txt') as f:
+with open('../inputs/day10.txt') as f:
     jolts = [int(line) for line in f.readlines()]
 
 jolts.append(max(jolts) + 3)

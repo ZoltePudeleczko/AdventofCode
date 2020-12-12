@@ -1,4 +1,4 @@
-with open('inputs/day9.txt') as f:
+with open('../inputs/day9.txt') as f:
     numbers = [int(line) for line in f.readlines()]
 
 preamble = []

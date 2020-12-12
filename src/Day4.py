@@ -1,4 +1,4 @@
-with open('inputs/day4.txt') as f:
+with open('../inputs/day4.txt') as f:
     passportsLines = [line.replace('\n', '').replace(':', ' ').split(' ') for line in f.readlines()]
 
 passportsData = []

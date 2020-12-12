@@ -1,4 +1,4 @@
-with open('inputs/day6.txt') as f:
+with open('../inputs/day6.txt') as f:
     lines = [line.replace('\n', '') for line in f.readlines()]
 
 sum = 0

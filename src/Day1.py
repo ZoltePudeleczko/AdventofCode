@@ -1,4 +1,4 @@
-with open('inputs/day1.txt') as f:
+with open('../inputs/day1.txt') as f:
     expenses = [int(line) for line in f.readlines()]
 
 for i in range(len(expenses)):

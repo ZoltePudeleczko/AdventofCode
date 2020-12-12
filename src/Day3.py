@@ -10,7 +10,7 @@ def slope(tobogganMap, right, down):
     
     return trees
 
-with open('inputs/day3.txt') as f:
+with open('../inputs/day3.txt') as f:
     tobogganMap = f.readlines()
 
 print(f"3-1: {slope(tobogganMap, 3, 1)}")
