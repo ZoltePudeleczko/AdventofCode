@@ -42,6 +42,18 @@ def build_image(image_tiles, edge_size, image=[], done=[]):
                         return result
 
 
+def assemble_image(image, edge_size):
+    wholeImage = []
+    for x in range(edge_size):
+        for i in range(1, len(image[0].tile) - 1):
+            line = ''
+            for j in range(x * edge_size, (x + 1) * edge_size):
+                for c in image[j].tile[i][1:-1]:
+                    line += c
+            wholeImage.append(line)
+    return wholeImage
+
+
 with open('../inputs/day20.txt') as f:
     lines = f.readlines()
     imageTiles = []
@@ -82,4 +94,9 @@ with open('../inputs/day20.txt') as f:
 edge_size = int(len(imageTiles) ** 0.5)
 image = build_image(imageTiles, edge_size)
 
-print(f"20-1: {image[0].number * image[11].number * image[-1].number * image[-12].number}")
+print(f"20-1: {image[0].number * image[edge_size - 1].number * image[-1].number * image[-edge_size].number}")
+
+image = assemble_image(image, edge_size)
+with open('../inputs/day20-2.txt', 'w') as f:
+    for line in image:
+        f.write(f"{line}\n")
