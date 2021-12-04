@@ -23,7 +23,7 @@ for n in commonCount:
         gammaRate += '1'
         epsilonRate += '0'
 
-print(f"2-1: {gammaRate} {epsilonRate} {int(gammaRate, 2) * int(epsilonRate, 2)}")
+print(f"3-1: {gammaRate} {epsilonRate} {int(gammaRate, 2) * int(epsilonRate, 2)}")
 
 generatorRatings = numbers[:]
 scrubberRatings = numbers[:]
@@ -46,4 +46,4 @@ while len(scrubberRatings) > 1:
         scrubberRatings = [r for r in scrubberRatings if r[i] == '1']
     i += 1 
 
-print(f"2-2: {generatorRatings[0]} {scrubberRatings[0]} {int(generatorRatings[0], 2) * int(scrubberRatings[0], 2)}")
+print(f"3-2: {generatorRatings[0]} {scrubberRatings[0]} {int(generatorRatings[0], 2) * int(scrubberRatings[0], 2)}")
