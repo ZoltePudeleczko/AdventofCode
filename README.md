@@ -15,7 +15,7 @@
 | [Day 9](https://adventofcode.com/2021/day/9) | [here](https://github.com/ZoltePudeleczko/AdventofCode2021/blob/main/src/day9.py) | :star::star: |
 | [Day 10](https://adventofcode.com/2021/day/10) | [here](https://github.com/ZoltePudeleczko/AdventofCode2021/blob/main/src/day10.py) | :star::star: |
 | [Day 11](https://adventofcode.com/2021/day/11) | [here](https://github.com/ZoltePudeleczko/AdventofCode2021/blob/main/src/day11.py) | :star::star: |
-| Day 12 |
+| [Day 12](https://adventofcode.com/2021/day/12) | [here](https://github.com/ZoltePudeleczko/AdventofCode2021/blob/main/src/day12.py) | :star::star: |
 | Day 13 |
 | Day 14 |
 | Day 15 |
