@@ -8,8 +8,8 @@ overlaps <- function(x) {
     length(intersect(unlist(x[1]), unlist(x[2]))) > 0
 }
 
-input <- readLines("inputs/day4.txt") |>
-    strsplit("[-,]") |>
+input <- readLines("inputs/day4.txt") %>%
+    strsplit("[-,]") %>%
     map(as.integer) %>%
     map(as_sequences) %>%
     map_lgl(overlaps) %>%

@@ -9,8 +9,8 @@ fully_contains <- function(x) {
         length(setdiff(unlist(x[2]), unlist(x[1]))) == 0
 }
 
-input <- readLines("inputs/day4.txt") |>
-    strsplit("[-,]") |>
+input <- readLines("inputs/day4.txt") %>%
+    strsplit("[-,]") %>%
     map(as.integer) %>%
     map(as_sequences) %>%
     map_lgl(fully_contains) %>%
