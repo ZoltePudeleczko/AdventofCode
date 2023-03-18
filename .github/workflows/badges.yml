@@ -1,25 +1,23 @@
 name: Update AoC Badges
 on:
-  workflow_dispatch:                             # allow to manually start the workflow 
-  push:                      
+  workflow_dispatch:
+  push:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2                # clones your repo
-          
+      - uses: actions/checkout@v2
       - uses: joblo2213/aoc-badges-action@v3
         with:
-          userid: 208492                          # your user id, see setup on how to obtain
-          session: ${{ secrets.AOC_SESSION }}    # secret containing session code, see setup on how to obtain
-          year: 2022                                                                                     # The year for which stats should be retrieved
-          leaderboard: 'https://adventofcode.com/2022/leaderboard/private/view/208492.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
-          file: 'README.md'                                                                              # The file that contains the badges
-          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge in your file.
-          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
-
-      - uses: stefanzweifel/git-auto-commit-action@v4     # Step that pushes these local changes back to your github repo
+          userid: 208492
+          session: ${{ secrets.AOC_SESSION }}
+          year: 2022
+          leaderboard: 'https://adventofcode.com/2022/leaderboard/private/view/208492.json'
+          file: 'README.md'
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'
+          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update badges
           file_pattern: README.md
