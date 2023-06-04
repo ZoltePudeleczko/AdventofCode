@@ -1,7 +1,9 @@
-name: Update AoC Badges
+name: Update 2022 AoC Badges
 on:
   workflow_dispatch:
   push:
+    paths:
+      - 2022/**
 
 jobs:
   update:
