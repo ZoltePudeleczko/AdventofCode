@@ -5,10 +5,12 @@
 
 using namespace std;
 
-struct particle {
+struct particle
+{
 	int pos[3];
 	int vel[3];
 	int acc[3];
+	bool removed;
 };
 
 int main()
@@ -40,8 +42,10 @@ int main()
 		p.acc[2] = stoi(tmp.substr(po + 1));
 		particles.push_back(p);
 	}
-	int minacc = abs(particles[0].acc[0]) + abs(particles[0].acc[1]) + abs(particles[0].acc[2]);
-	int minind = 0;
+
+	// Part I
+	int minacc = INT_MAX;
+	int minind = -1;
 	for (int i = 0; i < particles.size(); i++)
 	{
 		if (abs(particles[i].acc[0]) + abs(particles[i].acc[1]) + abs(particles[i].acc[2]) < minacc)
@@ -52,5 +56,56 @@ int main()
 	}
 
 	cout << "Part I: " << minind << endl;
-	return 0;
+
+	// Part II
+	int lastCollision = 0;
+	while (lastCollision < 100)
+	{
+		for (int i = 0; i < particles.size(); i++)
+		{
+			if (particles[i].removed)
+				continue;
+
+			particles[i].vel[0] += particles[i].acc[0];
+			particles[i].vel[1] += particles[i].acc[1];
+			particles[i].vel[2] += particles[i].acc[2];
+			particles[i].pos[0] += particles[i].vel[0];
+			particles[i].pos[1] += particles[i].vel[1];
+			particles[i].pos[2] += particles[i].vel[2];
+		}
+
+		bool collision = false;
+		for (int i = 0; i < particles.size(); i++)
+		{
+			if (particles[i].removed)
+				continue;
+
+			for (int j = i + 1; j < particles.size(); j++)
+			{
+				if (particles[j].removed)
+					continue;
+
+				if (particles[i].pos[0] == particles[j].pos[0] && particles[i].pos[1] == particles[j].pos[1] && particles[i].pos[2] == particles[j].pos[2])
+				{
+					particles[i].removed = true;
+					particles[j].removed = true;
+					collision = true;
+				}
+			}
+		}
+
+		if (!collision)
+			lastCollision++;
+		else
+			lastCollision = 0;
+	}
+
+	int count = 0;
+	for (auto particle : particles)
+	{
+		if (!particle.removed)
+			count++;
+	}
+
+	cout << "Part II: " << count << endl;
 }
