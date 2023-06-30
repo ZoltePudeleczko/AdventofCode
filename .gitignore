@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# compiled C++ code
+*.bin
+
 # Distribution / packaging
 .Python
 build/
