@@ -74,3 +74,6 @@ Finally, the squares are joined into a new grid:
 Thus, after 2 iterations, the grid contains 12 pixels that are on.
 
 How many pixels stay on after 5 iterations?
+
+--- Part Two ---
+How many pixels stay on after 18 iterations?

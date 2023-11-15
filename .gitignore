@@ -175,3 +175,5 @@ vignettes/*.pdf
 .vscode/
 
 *.exe
+
+obj/
