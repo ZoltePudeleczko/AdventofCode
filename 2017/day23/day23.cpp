@@ -90,7 +90,6 @@ int main()
 	int number = startingNumber;
 	do
 	{
-		cout << number << endl;
 		bool isNotPrime = false;
 		for (int i = 2; i <= number / 2; i++)
 		{
