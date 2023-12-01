@@ -1,0 +1,25 @@
+name: Update 2023 AoC Badges
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 2023/**
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: joblo2213/aoc-badges-action@v3
+        with:
+          userid: 208492
+          session: ${{ secrets.AOC_SESSION }}
+          year: 2023
+          leaderboard: 'https://adventofcode.com/2023/leaderboard/private/view/208492.json'
+          file: '2023/README.md'
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'
+          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update badges
+          file_pattern: README.md
