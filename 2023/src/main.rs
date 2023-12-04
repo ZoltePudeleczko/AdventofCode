@@ -1,7 +1,7 @@
 use std::process::Command;
 
 fn main() {
-    for day in 1..=1 {
+    for day in 1..=2 {
         let day = format!("day{day}");
         let cmd = Command::new("cargo")
             .args(["run", "--release", "--bin", &day])
