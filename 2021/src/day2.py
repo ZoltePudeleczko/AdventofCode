@@ -1,4 +1,4 @@
-with open('./inputs/day2.txt') as f:
+with open('../inputs/day2.txt') as f:
     commands = [(line.split(' ')[0], int(line.split(' ')[1])) for line in f.readlines()]
 
 position = [0, 0]

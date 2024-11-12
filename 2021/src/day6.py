@@ -1,5 +1,5 @@
-with open('./inputs/day6.txt') as f:
-    fish = [int(n) for n in f.readline().strip().split(',')]
+with open("../inputs/day6.txt") as f:
+    fish = [int(n) for n in f.readline().strip().split(",")]
 
 
 def simulate_lanternfish(fish, days):

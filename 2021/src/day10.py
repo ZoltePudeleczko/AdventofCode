@@ -1,4 +1,4 @@
-with open('./inputs/day10.txt') as f:
+with open("../inputs/day10.txt") as f:
     subsystem = [line.strip() for line in f.readlines()]
 
 matcher = {
@@ -35,7 +35,7 @@ for line in subsystem:
                 break
             else:
                 openingCharacters.pop()
-    
+
     if not isCorrupted:
         openingCharacters.reverse()
         score = 0

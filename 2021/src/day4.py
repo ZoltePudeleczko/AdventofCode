@@ -1,12 +1,12 @@
-with open('./inputs/day4.txt') as f:
+with open("../inputs/day4.txt") as f:
     lines = [line.strip() for line in f.readlines()]
 
-drawnNumbers = [int(number) for number in lines[0].split(',')]
+drawnNumbers = [int(number) for number in lines[0].split(",")]
 
 boards = []
 newBoard = []
 for line in lines[2:]:
-    if line == '':
+    if line == "":
         boards.append(newBoard)
         newBoard = []
     else:
@@ -33,7 +33,7 @@ def check_for_bingo(board):
         if bingoChance == True:
             bingo = True
             break
-    
+
     if bingo == False:
         for x in range(len(board[0])):
             bingoChance = True
@@ -70,7 +70,7 @@ for number in drawnNumbers:
             elif len(boards) == 1:
                 lastResult = sum_unmarked(board) * number
             boards.remove(board)
-    
+
     if len(boards) == 0:
         break
 

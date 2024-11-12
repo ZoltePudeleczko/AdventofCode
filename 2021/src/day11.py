@@ -1,4 +1,4 @@
-with open('./inputs/day11.txt') as f:
+with open("../inputs/day11.txt") as f:
     octopuses = [[int(n) for n in line.strip()] for line in f.readlines()]
 
 octopusesNumber = len(octopuses) * len(octopuses[0])
@@ -31,11 +31,23 @@ for i in range(1000):
                         octopuses[x][y + 1] += 1
                     if x > 0 and y > 0 and octopuses[x - 1][y - 1] != -1:
                         octopuses[x - 1][y - 1] += 1
-                    if x > 0 and y < len(octopuses[0]) - 1 and octopuses[x - 1][y + 1] != -1:
+                    if (
+                        x > 0
+                        and y < len(octopuses[0]) - 1
+                        and octopuses[x - 1][y + 1] != -1
+                    ):
                         octopuses[x - 1][y + 1] += 1
-                    if x < len(octopuses) - 1 and y > 0 and octopuses[x + 1][y - 1] != -1:
+                    if (
+                        x < len(octopuses) - 1
+                        and y > 0
+                        and octopuses[x + 1][y - 1] != -1
+                    ):
                         octopuses[x + 1][y - 1] += 1
-                    if x < len(octopuses) - 1 and y < len(octopuses[0]) - 1 and octopuses[x + 1][y + 1] != -1:
+                    if (
+                        x < len(octopuses) - 1
+                        and y < len(octopuses[0]) - 1
+                        and octopuses[x + 1][y + 1] != -1
+                    ):
                         octopuses[x + 1][y + 1] += 1
 
     if i < 100:

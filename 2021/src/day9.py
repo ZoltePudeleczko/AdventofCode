@@ -1,20 +1,24 @@
-with open('./inputs/day9.txt') as f:
+with open("../inputs/day9.txt") as f:
     heightmap = [line.strip() for line in f.readlines()]
 
 riskLevel = 0
 for y in range(len(heightmap)):
     for x in range(len(heightmap[y])):
-        if x-1 < 0 or int(heightmap[y][x-1]) > int(heightmap[y][x]):
-            if x+1 >= len(heightmap[y]) or int(heightmap[y][x+1]) > int(heightmap[y][x]):
-                if y-1 < 0 or int(heightmap[y-1][x]) > int(heightmap[y][x]):
-                    if y+1 >= len(heightmap) or int(heightmap[y+1][x]) > int(heightmap[y][x]):
+        if x - 1 < 0 or int(heightmap[y][x - 1]) > int(heightmap[y][x]):
+            if x + 1 >= len(heightmap[y]) or int(heightmap[y][x + 1]) > int(
+                heightmap[y][x]
+            ):
+                if y - 1 < 0 or int(heightmap[y - 1][x]) > int(heightmap[y][x]):
+                    if y + 1 >= len(heightmap) or int(heightmap[y + 1][x]) > int(
+                        heightmap[y][x]
+                    ):
                         riskLevel += int(heightmap[y][x]) + 1
 
 
 def fill_basinmap(y, x, basinNumber):
     if y >= 0 and y < len(basinmap):
         if x >= 0 and x < len(basinmap[0]):
-            if heightmap[y][x] != '9':
+            if heightmap[y][x] != "9":
                 if basinmap[y][x] == 0:
                     basinmap[y][x] = basinNumber
                     fill_basinmap(y - 1, x, basinNumber)
@@ -39,7 +43,7 @@ basinNumber = 0
 for y in range(len(basinmap)):
     for x in range(len(basinmap[y])):
         if basinmap[y][x] == 0:
-            if heightmap[y][x] != '9':
+            if heightmap[y][x] != "9":
                 basinNumber += 1
                 fill_basinmap(y, x, basinNumber)
             else:

@@ -1,5 +1,5 @@
-with open('./inputs/day7.txt') as f:
-    crabs = [int(n) for n in f.readline().strip().split(',')]
+with open("../inputs/day7.txt") as f:
+    crabs = [int(n) for n in f.readline().strip().split(",")]
 
 
 def check_fuel_spent(positions, checkValue):
