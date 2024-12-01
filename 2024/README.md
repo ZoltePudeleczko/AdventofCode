@@ -1,13 +1,13 @@
 # Advent of Code 2024 solutions 🎄
 
-![Stars](https://img.shields.io/badge/stars%20⭐-0-yellow)
-![Days Completed](https://img.shields.io/badge/days%20completed-0-red)
+![](https://img.shields.io/badge/stars%20⭐-0-yellow)
+![](https://img.shields.io/badge/days%20completed-0-red)
 
 ## All days
 
 | Task | Solution | Stars |
 | ------------- | :-------------: | :----: |
-| [Day 1](https://adventofcode.com/2021/day/1) | [here](src/day1.py) | :star::star: |
+| [Day 1](https://adventofcode.com/2024/day/1) | [here](src/day1.py) | :star::star: |
 | Day 2 | | |
 | Day 3 | | |
 | Day 4 | | |
