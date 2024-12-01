@@ -1,7 +1,7 @@
 # Advent of Code 2024 solutions 🎄
 
-![Stars](https://img.shields.io/badge/stars%20⭐-0-yellow)
-![Days Completed](https://img.shields.io/badge/days%20completed-0-red)
+![Stars](https://img.shields.io/badge/stars%20⭐-2-yellow)
+![Days Completed](https://img.shields.io/badge/days%20completed-1-red)
 
 ## All days
 
