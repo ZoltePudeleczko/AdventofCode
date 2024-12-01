@@ -15,11 +15,11 @@ jobs:
           userid: 208492
           session: ${{ secrets.AOC_SESSION }}
           year: 2022
-          leaderboard: 'https://adventofcode.com/2022/leaderboard/private/view/208492.json'
-          file: '2022/README.md'
+          leaderboard: "https://adventofcode.com/2022/leaderboard/private/view/208492.json"
+          file: "2022/README.md"
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'
           daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update badges
-          file_pattern: README.md
+          file_pattern: "2022/README.md"
