@@ -31,9 +31,9 @@ def part_two():
     result = 0
     for mul_expression in re.finditer(MUL_REGEX, memory):
         do_mul = min(
-            enumerate([i for i in do_instructions if i[0] < mul_expression.start()]),
-            key=lambda x: abs(mul_expression.start() - x[1][0]),
-        )[1][1]
+            [i for i in do_instructions if i[0] < mul_expression.start()],
+            key=lambda x: abs(mul_expression.start() - x[0]),
+        )[1]
 
         if not do_mul:
             continue
