@@ -4,9 +4,9 @@ from common import *
 DAY_NUMBER = 3
 USE_EXAMPLE = False
 
-DO_REGEX = "do\(\)"
-DO_NOT_REGEX = "don't\(\)"
-MUL_REGEX = "mul\([0-9]{1,3},[0-9]{1,3}\)"
+DO_REGEX = r"do\(\)"
+DO_NOT_REGEX = r"don\'t\(\)"
+MUL_REGEX = r"mul\([0-9]{1,3},[0-9]{1,3}\)"
 
 with get_data(DAY_NUMBER, USE_EXAMPLE) as f:
     memory = "".join(f.readlines())
