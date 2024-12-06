@@ -2,5 +2,5 @@
 
 Hey there! This repo has my Python solutions for the Advent of Code 2024 challenges. Enjoy! 🎅
 
-![Stars](https://img.shields.io/badge/stars%20⭐-10-yellow)
-![Days Completed](https://img.shields.io/badge/days%20completed-5-red)
+![Stars](https://img.shields.io/badge/stars%20⭐-12-yellow)
+![Days Completed](https://img.shields.io/badge/days%20completed-6-red)
