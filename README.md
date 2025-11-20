@@ -14,3 +14,4 @@ Some of the solutions are clever some not so much, be warned :sweat_smile:
 | [2022 puzzles](https://adventofcode.com/2022) | [view my solutions in R](/2022/) | [![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)](/2022/) | |
 | [2023 puzzles](https://adventofcode.com/2023) | [view my solutions in Rust](/2023/) | [![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)](/2023/) | |
 | [2024 puzzles](https://adventofcode.com/2024) | [view my solutions in Python](/2024/) | [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](/2024/) | |
+| [2025 puzzles](https://adventofcode.com/2025) | [view my solutions in Python](/2025/) | [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](/2025/) | |
