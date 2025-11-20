@@ -179,3 +179,13 @@ Cargo.lock
 *.exe
 
 obj/
+
+# Advent of Code - Input files and task descriptions
+# Per AoC rules, these should not be stored in version control
+**/inputs/
+**/input*.txt
+**/input*.in
+**/*backstory*.txt
+**/example*.txt
+**/*example*.txt
+**/*example*.in
